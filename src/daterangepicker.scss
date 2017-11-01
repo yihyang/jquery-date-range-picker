@@ -1,5 +1,5 @@
 .date-picker {
-    width: 170px;
+    width: 292px;
     height: 25px;
     padding: 0;
     border: 0;
@@ -17,15 +17,11 @@
 .date-picker-wrapper {
     position: absolute;
     z-index: 1;
-    border: 1px solid #bfbfbf;
-    background-color: #efefef;
-    padding: 5px 12px;
-    font-size: 12px;
     line-height: 20px;
     color: #aaa;
     font-family: Arial, sans-serif;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     box-sizing: initial;
+    background-color: white;
 }
 
 .date-picker-wrapper.inline-wrapper {
@@ -36,10 +32,6 @@
 
 .date-picker-wrapper.single-date {
     width: auto;
-}
-
-.date-picker-wrapper.no-shortcuts {
-    padding-bottom: 12px;
 }
 
 .date-picker-wrapper.no-topbar {
@@ -62,7 +54,8 @@
 }
 
 .date-picker-wrapper .month-name {
-    text-transform: uppercase;
+    color: #333333;
+    text-transform: capitalize;
 }
 
 .date-picker-wrapper .select-wrapper {
@@ -105,7 +98,7 @@
 }
 
 .date-picker-wrapper .month-wrapper {
-    border: 1px solid #bfbfbf;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21);
     border-radius: 3px;
     background-color: #fff;
     padding: 5px;
@@ -115,12 +108,12 @@
 }
 
 .date-picker-wrapper .month-wrapper table {
-    width: 190px;
+    width: 292px;
     float: left;
 }
 
 .date-picker-wrapper .month-wrapper table.month2 {
-    width: 190px;
+    width: 292px;
     float: left;
 }
 
@@ -131,15 +124,21 @@
     line-height: 14px;
     margin: 0px;
     padding: 0px;
+    border: solid 2px transparent;
 }
 
 .date-picker-wrapper .month-wrapper table .day {
-    padding: 5px 0;
+    padding: 0;
     line-height: 1;
-    font-size: 12px;
     margin-bottom: 1px;
     color: #ccc;
     cursor: default;
+    font-size: 14px;
+    height: 28px;
+    width: 36px;
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 2px;
 }
 
 .date-picker-wrapper .month-wrapper table div.day.lastMonth,
@@ -149,14 +148,19 @@
 }
 
 .date-picker-wrapper .month-wrapper table .day.checked {
-    background-color: rgb(156, 219, 247);
+    background-color: #ebf2ff;
 }
 
 .date-picker-wrapper .month-wrapper table .week-name {
-    height: 20px;
     line-height: 20px;
     font-weight: 100;
     text-transform: uppercase;
+    font-size: 14px;
+    th {
+        color: #808080;
+        font-weight: 300;
+        height: 28px;
+    }
 }
 
 .date-picker-wrapper .month-wrapper table .day.has-tooltip {
@@ -173,7 +177,7 @@
 }
 
 .date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
-    background-color: #cdecfa;
+    background-color: #ebf2ff;
 }
 
 .date-picker-wrapper .month-wrapper table .day.nextMonth,
@@ -182,28 +186,29 @@
 }
 
 .date-picker-wrapper .month-wrapper table .day.real-today {
-    background-color: rgb(255, 230, 132);
+    background-color: #f0faf0;
 }
+
 
 .date-picker-wrapper .month-wrapper table .day.real-today.checked,
 .date-picker-wrapper .month-wrapper table .day.real-today.hovering {
-    background-color: rgb(112, 204, 213);
+    background-color: #e2f0ee;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.valid.real-today {
+    color: #55c05a;
 }
 
 .date-picker-wrapper table .caption {
     height: 40px;
+    font-size: 16px;
 }
 
 .date-picker-wrapper table .caption .next,
 .date-picker-wrapper table .caption .prev {
+    color: #808080;
     padding: 0 5px;
     cursor: pointer;
-}
-
-.date-picker-wrapper table .caption .next:hover,
-.date-picker-wrapper table .caption .prev:hover {
-    background-color: #ccc;
-    color: white;
 }
 
 .date-picker-wrapper .gap {
@@ -288,6 +293,7 @@
     line-height: 1.4;
     position: relative;
     padding: 10px 40px 10px 0;
+    display: none;
 }
 
 .date-picker-wrapper .drp_top-bar .error-top {
@@ -392,12 +398,12 @@
 }
 
 .date-picker-wrapper .first-date-selected {
-    background-color: #49e !important;
+    background-color: #0044dd !important;
     color: white !important;
 }
 
 .date-picker-wrapper .last-date-selected {
-    background-color: #49e !important;
+    background-color: #0044dd !important;
     color: white !important;
 }
 
